@@ -4,13 +4,14 @@ const route = require('./routes')
 
 const app = express();
 
+const PORT = process.env.PORT || 3030
 
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Tudo certo !'})
+  res.status(200).json({ message: 'Seja bem vindo ao MailSender !'})
 })
 
 app.use(route)
 
-app.listen(3000, () => console.log('Escutando porta 3000'))
+app.listen(PORT, () => console.log(`Escutando na porta ${PORT}`))

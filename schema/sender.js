@@ -11,7 +11,7 @@ const send = async (subject, message, contacts) => {
   
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: `${process.env.HOST_ORGANIZATION}, <${process.env.HOST_ORG_MAIL}>`, // sender address
+    from: `"${process.env.HOST_ORGANIZATION}" <${process.env.HOST_ORG_MAIL}>`, // sender address
     to: `${contacts.toString()}`, // list of receivers
     subject: `${subject}`, // Subject line
     text: `${message}`, // plain text body

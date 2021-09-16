@@ -2,11 +2,13 @@ const express = require('express')
 
 const rescue = require('express-rescue')
 
-const emailSender = require('../services/emailSender')
+const { sendMail, sendUnique } = require('../controllers/senderController')
 
 const route = express.Router()  
 
-route.get('/sendmail', rescue(emailSender))
+route.get('/sendmail', rescue(sendMail))
+
+route.get('/sendunique', rescue(sendUnique))
 
 const genericError = async (err, req, res, next) => {
   res.status(404).json({ message: `${err}` })

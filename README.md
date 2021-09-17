@@ -37,4 +37,4 @@ Users should be able to:
 ## Author
 
 - Website - [Neto Silva](https://netosilv4.github.io/)
-- Frontend Mentor - [Netosilv4](https://www.linkedin.com/in/netosilv4/)
+- Linkedin - [Netosilv4](https://www.linkedin.com/in/netosilv4/)
